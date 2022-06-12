@@ -1,0 +1,33 @@
+{
+  "name": "backserver",
+  "version": "1.0.0",
+  "description": "Kate's diploma backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_PATH=./ node index.js",
+    "dev": "NODE_PATH=./ nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MightWarrior/backserver.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MightWarrior/backserver/issues"
+  },
+  "homepage": "https://github.com/MightWarrior/backserver#readme",
+  "dependencies": {
+    "12factor-config": "^2.0.0",
+    "dotenv": "^8.0.0",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa2-cors": "^2.0.6",
+    "koa2-router": "^1.1.2",
+    "nodemon": "^2.0.16",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.20.1"
+  }
+}
