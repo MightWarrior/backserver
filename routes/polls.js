@@ -19,4 +19,16 @@ router.post("/polls", async ctx => {
     return Response.json(ctx, newPoll);
 })
 
+router.post("/polls/active/:id", async ctx => {
+    let {id} = ctx.params;
+    let {isActive} = ctx.request.body;
+    let updatedPoll = await PollsController.setActive(id, isActive);
+    return Response.json(ctx, updatedPoll);
+})
+
+router.post("/polls/update", async ctx => {
+    let newPoll = await PollsController.updatePoll(ctx.request.body);
+    return Response.json(ctx, newPoll);
+})
+
 module.exports = router;
